@@ -1,0 +1,72 @@
+/* Layout and typography closely follow the academic homepage used as reference. */
+:root { color-scheme: light; --text: #494e52; --link: #52adc8; --border: #f2f3f3; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--text); font-family: -apple-system, "San Francisco", Roboto, "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 18px; line-height: 1.5; }
+a { color: var(--link); text-decoration: underline; }
+a:hover { color: #277a94; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+.skip-link { position: absolute; top: -50px; left: 16px; padding: 8px 12px; background: #fff; z-index: 10; }
+.skip-link:focus { top: 8px; }
+.masthead { min-height: 82px; border-bottom: 1px solid var(--border); }
+.masthead-inner { width: min(1244px, calc(100% - 40px)); min-height: 81px; margin: 0 auto; display: flex; align-items: center; gap: 36px; }
+.masthead-inner a { color: #6f7982; font-size: 18px; text-decoration: none; white-space: nowrap; }
+.masthead-inner a:hover { color: var(--link); }
+.masthead-inner .site-title { width: 139px; margin-right: 0; flex: 0 0 auto; color: #6f7982; font-weight: 700; }
+.page-layout { width: min(1244px, calc(100% - 40px)); margin: 0 auto; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 33px; padding: 35px 0 72px; }
+.sidebar { align-self: start; position: sticky; top: 28px; font-size: 14px; line-height: 1.5; }
+.avatar { display: block; width: 176px; height: 176px; border-radius: 50%; object-fit: cover; padding: 4px; border: 1px solid #e5e5e5; margin: 2px 0 12px; }
+.author-name { font-size: 18px; font-weight: 700; line-height: 1.4; margin: 0 0 10px; }
+.author-name span { font-size: 16px; font-weight: 600; }
+.author-bio { font-size: 14px; margin: 0 0 19px; }
+.author-links { list-style: none; margin: 0; padding: 0; }
+.author-links li { display: flex; align-items: flex-start; gap: 5px; margin: 0 0 8px; font-size: 14px; }
+.author-links li a { display: inline-flex; align-items: center; gap: 5px; color: var(--text); text-decoration: none; }
+.author-links li a:hover { color: var(--link); }
+.author-links svg { flex: 0 0 15px; width: 15px; height: 15px; margin-top: 3px; fill: #222; }
+.author-links a svg { margin-top: 1px; }
+.author-links .icon-cutout { fill: #fff; }
+.page-content { min-width: 0; padding-top: 0; }
+h1, h2, h3 { color: var(--text); line-height: 1.3; }
+h1, h2 { font-size: 28px; font-weight: 700; margin: 0 0 25px; }
+h3 { font-size: 22px; margin: 26px 0 12px; }
+p { margin: 0 0 22px; }
+ul { margin: 0 0 25px; padding-left: 40px; }
+li { margin: 0 0 14px; }
+.home-facts li { margin-bottom: 24px; }
+.fact-label { display: inline-block; margin-right: 7px; }
+.education-list { margin-bottom: 0; }
+.education-list li { margin-bottom: 0; }
+.education-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 18px; }
+.education-details { line-height: 1.8; }
+.page-content section { scroll-margin-top: 20px; }
+.page-content section + section { margin-top: 44px; }
+.page-content section > h2:first-child { margin-bottom: 24px; }
+.project-list li { margin-bottom: 20px; }
+.site-footer { border-top: 1px solid #bdc1c4; background: #f2f3f3; min-height: 150px; }
+.footer-inner { width: min(1244px, calc(100% - 40px)); margin: 0 auto; padding: 32px 0; font-size: 14px; }
+.footer-inner p { margin: 0 0 10px; }
+.footer-inner a { color: #8592a0; text-decoration: none; }
+.footer-inner small { color: #8592a0; font-size: 12px; }
+@media (max-width: 800px) {
+  .masthead { min-height: 0; }
+  .masthead-inner { min-height: 0; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; }
+  .masthead-inner .site-title { width: 100%; }
+  .masthead-inner a { font-size: 16px; }
+  .page-layout { display: block; padding-top: 24px; }
+  .sidebar { position: static; margin-bottom: 36px; }
+  .avatar { width: 140px; height: 140px; }
+  .author-links { display: flex; flex-wrap: wrap; gap: 5px 18px; }
+  .author-links li:first-child { flex-basis: 100%; }
+  .page-content section + section { margin-top: 36px; }
+}
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .masthead-inner, .page-layout, .footer-inner { width: calc(100% - 32px); }
+  .masthead-inner { gap: 6px 17px; }
+  .masthead-inner a { font-size: 14px; }
+  h1, h2 { font-size: 25px; }
+  h3 { font-size: 20px; }
+  ul { padding-left: 25px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
