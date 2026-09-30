@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper]{article}
+
+% One-page academic CV. Replace blank fields only when their details are confirmed.
+\usepackage[margin=0.58in,top=0.54in,bottom=0.58in]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=2]{SimSun}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.02}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{0.9em}%
+  {\bfseries\normalsize\MakeUppercase{#1}}\par\vspace{0.18em}%
+  \hrule height 0.4pt\vspace{0.45em}%
+}
+\newcommand{\cvbulletsstart}{\begin{itemize}[leftmargin=2.15em,topsep=0.3em,itemsep=0.22em,parsep=0pt]}
+\newcommand{\cvbulletsend}{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries Junchao Chen {\normalsize}}\\[0.35em]
+  \href{mailto:cjc050930@gmail.com}{cjc050930@gmail.com}\quad | \quad
+  \href{https://github.com/Junchao-Chen05}{github.com/Junchao-Chen05}\quad | \quad
+  \href{https://orcid.org/0009-0000-5720-7369}{ORCID: 0009-0000-5720-7369}\\[0.2em]
+  Hefei, Anhui, China
+\end{center}
+
+\cvsection{Education}
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+  \textbf{Anhui University} & \\
+  B.S. in Economic Statistics\quad | \quad GPA: 88.91/100 & Sep 2024 -- \\
+\end{tabularx}
+
+\cvsection{Research Experience}
+\begin{tabularx}{\linewidth}{@{}X@{\hspace{1.2em}}r@{}}
+  \textbf{Probability Limit Theorems for Dependent Variables and Their Applications to EV Regression Models}
+  & 2026 -- 2027 \\
+  \multicolumn{2}{@{}l@{}}{Provincial research grant \quad | \quad Project leader}\\
+\end{tabularx}
+\cvbulletsstart
+  \item \textbf{Limit theory:} Studied complete convergence and complete $f$-moment convergence for maximal randomly weighted sums of conditionally rowwise $m$-WOD arrays, including logarithmic endpoint cases.
+  \item \textbf{Sharpness analysis:} Examined sign-block constructions to identify thresholds for block growth and logarithmic moments, supported by examples and counterexamples.
+  \item \textbf{EV regression:} Applied the convergence results to a stabilized repeated-measurement errors-in-variables estimator and analyzed conditions for complete consistency.
+\cvbulletsend
+
+\vspace{0.3em}
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+  \textbf{LLM--SLM Collaboration for Sarcasm Detection} & \\
+  \multicolumn{2}{@{}l@{}}{Ongoing research}\\
+\end{tabularx}
+\cvbulletsstart
+  \item Exploring collaborative frameworks between large and small language models for sarcasm detection.
+  \item Studying model effectiveness, efficiency, and complementary reasoning capabilities.
+\cvbulletsend
+
+\vspace{0.3em}
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+  \textbf{Wiener Degradation Models with Nonlinear Drift and Stochastic Volatility for Remaining Useful Life Prediction} & \\
+  \multicolumn{2}{@{}l@{}}{Reliability statistics research}\\
+\end{tabularx}
+\cvbulletsstart
+  \item \textbf{Degradation modeling:} Studied nonlinear-drift Wiener processes with stochastic volatility for threshold-based remaining useful life (RUL) prediction.
+  \item \textbf{Functional estimation:} Analyzed local-polynomial mean estimation, bipower variation, and FPCA-based recovery of variance trajectories from repeated degradation paths.
+  \item \textbf{Reliability inference:} Distinguished conditional variance clocks from marginal variability and examined admissibility conditions for cumulative variance estimates.
+  \item \textbf{Simulation study:} Evaluated 300 benchmark and 900 controlled datasets to study sampling frequency, drift contamination, and latent-volatility effects on prediction.
+  \item \textbf{Model validation:} Identified cases where low curve-estimation error coexists with invalid variance clocks or threshold-crossing probabilities.
+\cvbulletsend
+
+\cvsection{Awards and Competitions}
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+  National Encouragement Scholarship & 2025--2026\\[0.16em]
+  Academic Excellence Scholarship & 2024--2025\\[0.16em]
+  M Award, Mathematical Contest in Modeling & 2025--2026\\[0.16em]
+  Provincial Second Prize, National Undergraduate Statistical Modeling Competition &2025--2026\\[0.16em]
+\end{tabularx}
+
+\cvsection{Skills}
+\textbf{Languages:} CET-6: 575\\[0.15em]
+\textbf{Technical Skills:} R / Python / PyTorch / \LaTeX{} / functional data analysis / stochastic degradation modeling / dependent-data asymptotics\\[0.15em]
+\textbf{Independent Study:} Stanford CS229, CS230, CS224N, and CS231N course materials (machine learning, deep learning, natural language processing, and computer vision).
+
+\end{document}
