@@ -1,0 +1,1 @@
+A single-page, static academic homepage ready for GitHub Pages. Open `index.html` locally to preview it. To publish later, put these files at the root of a GitHub repository and enable Pages for that branch.
